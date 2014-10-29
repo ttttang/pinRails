@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  # get 'pages/home'
+  root "pages#home" # here, go to localhost:3000 
+  get "about" => "pages#about" #the about on the left is the "route", which leads you to the view. The 
+  #right side is the controller. Hash tag separates the controller. 
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
