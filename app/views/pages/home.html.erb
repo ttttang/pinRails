@@ -1,10 +1,15 @@
- <!-- either "about" or about_path works -->
+
 <div class="jumbotron center">
-<h1>Tracy's Pinterest Project</h1>
-<p> Mosaic of Me.
-<%= link_to "Sign Up", "http://www.google.com", class: "btn btn-primary btn-lg" %> <!-- #another way of a href, to include a link. -->
-<%= "I'm cranky" %>
-<%= link_to "Log In", "#", class: "btn btn-primary btn-lg" %>
+     <h1>Tracy's Pinterest Project</h1>
+     <% if user_signed_in? %>
+          # do something
+     <% else %>
+       <p>
+         <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
+<%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+       </p>
+  <% end %>  
+</div>
 </p>
 </div>
 
