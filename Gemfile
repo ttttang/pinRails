@@ -53,3 +53,8 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'paperclip', '~> 4.2'
+gem 'aws-sdk', '~> 1.20.0'
+
+#masonry styling gems
+gem 'jquery-turbolinks'
+gem 'masonry-rails', '~> 0.2.0'
