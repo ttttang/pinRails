@@ -20,14 +20,21 @@ end
 
   def create 
     @pin = current_user.pins.build(pin_params)
-    @pin.save
-    redirect_to @pin 
+    
+    if @pin.save
+    redirect_to @pin
+  else
+    render action: 'new'
   end
+end
 
   def update
-    @pin.update(pin_params)
+    if @pin.update(pin_params)
     redirect_to @pin
+  else
+    render action: 'edit'
   end
+end
 
   def destroy
     @pin.destroy
