@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
   resources :pins
-
   devise_for :users
   # get 'pages/home'
-  root "pages#home" # here, go to localhost:3000 
+  root "pins#index" # here, go to localhost:3000 
   get "about" => "pages#about" #the about on the left is the "route", which leads you to the view. The 
   #right side is the controller. Hash tag separates the controller. 
 
